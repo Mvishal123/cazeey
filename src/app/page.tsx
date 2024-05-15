@@ -1,4 +1,6 @@
+import { Icons } from "@/components/icons";
 import Phone from "@/components/phone";
+import Reviews from "@/components/reviews";
 import SectionContainer from "@/components/section-container";
 import { Check, Star } from "lucide-react";
 import React from "react";
@@ -98,6 +100,103 @@ const Page = () => {
             </div>
           </div>
         </SectionContainer>
+      </section>
+
+      <section className="bg-slate-100 py-24">
+        <SectionContainer className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="flex flex-col items-center gap-4 sm:gap-6 lg:flex-row">
+            <h2 className="order-1 mt-2 text-balance text-center text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl">
+              What our{" "}
+              <span className="relative px-2">
+                {" "}
+                <Icons.underline className="pointer-events-none absolute inset-x-0 -bottom-6 hidden text-primary sm:block" />{" "}
+                customers
+              </span>{" "}
+              say
+            </h2>
+            <img
+              src="/snake-2.png"
+              alt="snake image"
+              className="order-0 w-24 lg:order-1"
+            />
+          </div>
+
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="mb-2 flex gap-0.5">
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+              </div>
+              <div className="text-lg leading-8">
+                <p>
+                  "The case feels durable and I even got a compliment on the
+                  design. Had the case for two and a half months now and{" "}
+                  <span className="bg-slate-800 p-0.5 text-white">
+                    the image is super clear.
+                  </span>{" "}
+                  On the case I had before, the image started fading into
+                  yellow-ish color after a couple of weeks. Love it"
+                </p>
+              </div>
+              <div className="mt-2 flex gap-4">
+                <img
+                  src="/users/user-1.png"
+                  alt="user"
+                  className="h-12 w-12 rounded-full object-cover"
+                />
+                <div className="flex flex-col">
+                  <p className="font-smi-bold">John</p>
+                  <div className="flex items-center gap-1.5 text-zinc-600">
+                    <Check className="h-4 w-4 stroke-[3px] text-primary" />
+                    <p className="text-sm">Verified Purchase</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Second user */}
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="mb-2 flex gap-0.5">
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+                <Star className="h-4 w-4 fill-red-600 text-red-600" />
+              </div>
+              <div className="text-lg leading-8">
+                <p>
+                  "Usually keep my phone together with my keys in my pocket and
+                  that led to some pretty heavy scratchmarks on all of my last
+                  cases. This one, besides a barely noticeable on the corner{" "}
+                  <span className="bg-slate-800 p-0.5 text-white">
+                    looks brand new after about half year.
+                  </span>{" "}
+                  I dig it."
+                </p>
+              </div>
+              <div className="mt-2 flex gap-4">
+                <img
+                  src="/users/user-2.png"
+                  alt="user"
+                  className="h-12 w-12 rounded-full object-cover"
+                />
+                <div className="flex flex-col">
+                  <p className="font-smi-bold">Meru</p>
+                  <div className="flex items-center gap-1.5 text-zinc-600">
+                    <Check className="h-4 w-4 stroke-[3px] text-primary" />
+                    <p className="text-sm">Verified Purchase</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SectionContainer>
+
+        <div className="pt-16">
+          <Reviews />
+        </div>
       </section>
     </div>
   );

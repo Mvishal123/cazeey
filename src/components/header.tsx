@@ -3,10 +3,12 @@ import SectionContainer from "./section-container";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
-const Header = () => {
-  const user = undefined;
-  const isAdmin = false;
+const Header = async () => {
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+  const isAdmin = user?.email === process.env.ADMIN_EMAIL;
   return (
     <header className="sticky inset-x-0 top-0 z-[100] h-14 border-b border-zinc-200 bg-white/75 backdrop-blur-lg transition-all">
       <SectionContainer>
